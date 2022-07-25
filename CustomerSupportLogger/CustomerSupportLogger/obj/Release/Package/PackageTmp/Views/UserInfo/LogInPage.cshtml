@@ -1,0 +1,53 @@
+﻿@model DAL.UserInfo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Log Page</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("LogInPage", "UserInfo", FormMethod.Post))
+        {
+            <fieldset>
+                <legend>Customer Support Executive Login Page</legend>
+
+              
+                @if (@ViewBag.Message != null)
+                {
+                    <div style="border: 1px solid red;color:red">
+                      @ViewBag.Message
+                    </div>
+                }
+                <table>
+                    <tr>
+                        <td>@Html.Label("User ID:")</td>
+                        <td>@Html.TextBoxFor(a => a.UserId)</td>                   
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.Label("Password:")
+                        </td>
+                        <td>
+                            @Html.PasswordFor(a => a.Password)
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Login" />
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </fieldset>
+        }
+    </div>
+</body>
+</html>

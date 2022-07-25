@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="CSLAzureDbEntities-Web.config Connection String" description="CSLAzureDbEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/CSLModel.csdl|res://*/CSLModel.ssdl|res://*/CSLModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=myazuresqldb23.database.windows.net;initial catalog=CSLAzureDb;persist security info=True;user id=sqlsa;password=Shoaib@123;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\HP\\source\\repos\\CustomerSupportLoggerRepo\\CustomerSupportLogger\\CustomerSupportLogger\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CSLAzureDbEntities']/@connectionString" />
+  </parameter>
+</parameters>

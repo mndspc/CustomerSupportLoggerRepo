@@ -1,0 +1,65 @@
+﻿@model DAL.CustLogInfo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add Customer Complaints Logging</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("AddCustPage", "CustLogInfo", FormMethod.Post))
+        {
+            <fieldset>
+                <legend>Add Customer Complaints</legend>
+
+
+                @if (@ViewBag.Message != null)
+                {
+                    <div style="border: 1px solid green;color:green">
+                        @ViewBag.Message
+                    </div>
+                }
+            <table>
+                <tr>
+                    <td>@Html.Label("Log ID:")</td>
+                    <td>@Html.TextBoxFor(a => a.LogId)</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Customer Email:")</td>
+                    <td>@Html.TextBoxFor(a => a.CustEmail)</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Customer Name:")</td>
+                    <td>@Html.TextBoxFor(a => a.CustName)</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Log Status:")</td>
+                    <td>@Html.TextBoxFor(a => a.LogStatus)</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("Description:")</td>
+                    <td>@Html.TextBoxFor(a => a.Description)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Save" />
+                    </td>
+                    <td>
+                        <input type="reset" value="Clear" />
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+            </fieldset>
+        }
+
+    </div>
+    </div>
+</body>
+</html>
